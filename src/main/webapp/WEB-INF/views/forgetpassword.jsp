@@ -54,7 +54,7 @@
 
 						<div class="form-group">
 							<label for="username">Username</label> <input type="text"
-								class="form-control" />
+								name="username" class="form-control" />
 						</div>
 						<input type="submit" value="Login">
 

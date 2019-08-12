@@ -53,11 +53,11 @@
 					<form method="post" action="${contextPath}/register">
 
 						<div class="form-group">
-							<label for="username">Username</label> <input type="text"
+							<label for="username">Username</label> <input type="text" name="username"
 								class="form-control" />
 						</div>
 						<div class="form-group">
-							<label for="password">password</label> <input type="password"
+							<label for="password">password</label> <input type="password" name="password"
 								path="password" class="form-control" />
 						</div>
 
