@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import com.example.demo.model.User;
 import com.example.demo.repository.UserRepository;
+import com.example.demo.service.UserService;
 
 @Service
 public class ForgetPasswordEmail  {
@@ -19,13 +20,13 @@ public class ForgetPasswordEmail  {
 	private JavaMailSender javaMailSender;
 	
 	@Autowired
-	private UserRepository userRepository;
+	private UserService userService;
 	
 	
 	
 	public boolean send(String toEmail,String content,String contextPath) {
 		
-		User user=userRepository.findByUsername(toEmail);
+		User user=userService.getByEmail(toEmail);
 		
 		try {
 		javaMailSender.send(new MimeMessagePreparator() {

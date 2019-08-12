@@ -77,10 +77,14 @@ public class UserController {
 	@PostMapping("/forgetpassword")
 	public String forgetPasswordProcess(@RequestParam("username")String username,Model model,HttpServletRequest request) {
 		
+		
+		System.out.println(username);
+		
 		User user = userService.get(username);
 		
 		if(user == null) {
 			model.addAttribute("errorMessage", "Username is not existed");
+			return "forgetpassword";
 		}
 		
 		

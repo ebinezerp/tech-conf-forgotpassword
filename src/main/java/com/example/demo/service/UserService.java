@@ -48,5 +48,15 @@ public class UserService {
 			return null;
 		}
 	}
+	
+	
+	public User getByEmail(String email) {
+		try {
+			return userRepository.findByEmail(email);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
 
 }
